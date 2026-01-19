@@ -1,133 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GerarcasRR Portfolio</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Smooth Scroll -->
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Fade Animation */
-    .fade {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
-    .fade.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- Floating Blobs -->
+<div class="blob" style="--size:200px; --top:10%; --left:20%; --color:#00bfff;"></div>
+<div class="blob" style="--size:300px; --top:50%; --left:70%; --color:#3f00ff;"></div>
+<div class="blob" style="--size:150px; --top:70%; --left:40%; --color:#00d4ff;"></div>
+
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-inner">
     <strong>GerarcasRR</strong>
-
-    <!-- Desktop Menu -->
     <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
+      <a href="#welcome">Home</a>
+      <a href="#profile">Profile</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
-
-    <!-- Hamburger -->
     <div class="hamburger" id="hamburger">☰</div>
   </div>
 </nav>
-
-<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#home" onclick="closeMenu()">Home</a>
-  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#welcome" onclick="closeMenu()">Home</a>
+  <a href="#profile" onclick="closeMenu()">Profile</a>
   <a href="#skills" onclick="closeMenu()">Skills</a>
   <a href="#projects" onclick="closeMenu()">Projects</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
-
 <div style="height:80px;"></div>
 
-<!-- ================= HOME ================= -->
-<section id="home" class="fade">
-  <h1>Hello, I'm <span>GerarcasRR</span></h1>
-  <p>Frontend Developer • Student • Tech Enthusiast</p>
+<!-- WELCOME SECTION -->
+<section id="welcome" class="fade">
+  <div class="section-container">
+    <div class="text">
+      <h1>Welcome to my <span>Portfolio Website</span></h1>
+      <p>Discover my work, skills, and projects.</p>
+    </div>
+    <div class="hero-gif">
+      <img src="coding.gif" alt="Coding Animation">
+    </div>
+  </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="fade">
-  <h2>About Me</h2>
-  <p>
-    I am a student developer passionate about modern web design,
-    animations, and interactive user experiences.
-  </p>
+<!-- PROFILE SECTION -->
+<section id="profile" class="fade glass">
+  <div class="section-container">
+    <div class="profile-image">
+      <img src="profile.gif" alt="My Profile GIF">
+    </div>
+    <div class="profile-text">
+      <h2>About Me</h2>
+      <p>Hello! I'm Rex, a passionate student developer exploring web design, animations, and interactive experiences. You can replace this GIF with any animated profile image you like.</p>
+    </div>
+  </div>
 </section>
 
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="fade">
+<!-- SKILLS SECTION -->
+<section id="skills" class="fade glass">
   <h2>Skills</h2>
-  <ul>
-    <li>HTML5 / CSS3</li>
-    <li>JavaScript</li>
-    <li>Tailwind CSS</li>
-    <li>Responsive Design</li>
-    <li>GitHub Pages</li>
-  </ul>
+  <div class="skill-cards">
+    <div class="glass">HTML5 / CSS3</div>
+    <div class="glass">JavaScript</div>
+    <div class="glass">Tailwind CSS</div>
+    <div class="glass">Responsive Design</div>
+    <div class="glass">GitHub Pages</div>
+  </div>
 </section>
 
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="fade">
+<!-- PROJECTS SECTION -->
+<section id="projects" class="fade glass">
   <h2>Projects</h2>
-
-  <div class="project-card">
+  <div class="project-card glass">
     <h3>Portfolio Website</h3>
     <p>Responsive portfolio built for school purposes.</p>
   </div>
-
-  <div class="project-card">
+  <div class="project-card glass">
     <h3>QR Attendance System</h3>
     <p>Automated QR-based attendance app with SMS integration.</p>
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="fade">
+<!-- CONTACT SECTION -->
+<section id="contact" class="fade glass">
   <h2>Contact Me</h2>
-
   <form action="mailto:yourgmail@gmail.com" method="post" enctype="text/plain">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer>
   <p>© 2026 GerarcasRR • For School Purposes Only</p>
 </footer>
 
-<!-- ================= SCRIPT ================= -->
+<!-- SCRIPTS -->
 <script>
-  /* Hamburger Menu */
+  // Hamburger Menu
   const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobileMenu");
 
   hamburger.addEventListener("click", () => {
     mobileMenu.classList.toggle("active");
-    hamburger.textContent =
-      hamburger.textContent === "☰" ? "✕" : "☰";
+    hamburger.textContent = hamburger.textContent === "☰" ? "✕" : "☰";
   });
 
   function closeMenu() {
@@ -135,19 +119,16 @@
     hamburger.textContent = "☰";
   }
 
-  /* Scroll Animation */
+  // Scroll Fade Animation
   const faders = document.querySelectorAll(".fade");
-
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
+      if(entry.isIntersecting){
         entry.target.classList.add("show");
       }
     });
   });
-
   faders.forEach(fade => observer.observe(fade));
 </script>
-
 </body>
 </html>
