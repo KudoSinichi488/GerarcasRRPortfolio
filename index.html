@@ -4,79 +4,102 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Gerarcas RR Portfolio</title>
+  <title>Gerarcas RR | Portfolio</title>
+  <meta name="description" content="Gerarcas RR Portfolio – Front-End Developer with smooth animations and modern UI.">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./Photo.jpg">
+  <link rel="icon" href="./Photo.jpg" />
 
   <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="./style.css">
 
-  <!-- AOS CSS -->
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ===== HEADER ===== -->
-  <header style="padding: 24px; text-align: center;">
-    <h1 data-aos="fade-down">Gerarcas RR</h1>
-    <p data-aos="fade-up">Front-End Portfolio</p>
-  </header>
-
-  <!-- ===== ABOUT ===== -->
-  <section style="padding: 40px;" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>
-      I am a front-end developer focused on clean UI,
-      smooth animations, and mobile-first design.
-    </p>
-  </section>
-
-  <!-- ===== PROJECTS ===== -->
-  <section style="padding: 40px;">
-    <h2 data-aos="fade-up">Projects</h2>
-
-    <div class="card" data-aos="zoom-in" style="margin-top: 20px; padding: 20px; border-radius: 12px; background: #0b0820;">
-      <h3>Sample Project</h3>
-      <p>Mobile-friendly animated portfolio project.</p>
+<!-- ===== NAVBAR ===== -->
+<nav style="position:fixed; top:0; width:100%; background:#030014; padding:16px; z-index:100;">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <strong>GerarcasRR</strong>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <!-- ===== CONTACT ===== -->
-  <section style="padding: 40px;" data-aos="fade-up">
-    <h2>Contact</h2>
+<div style="height:80px;"></div>
 
-    <form id="contact-form">
-      <input type="text" id="name" placeholder="Your name" required><br><br>
-      <input type="email" id="email" placeholder="Your email" required><br><br>
-      <textarea id="message" placeholder="Your message" required></textarea><br><br>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+<!-- ===== HOME ===== -->
+<section id="home" style="padding:60px 24px; text-align:center;">
+  <h1 data-aos="fade-down">Hi, I’m Gerarcas RR</h1>
+  <p data-aos="fade-up">Front-End Developer | Mobile-First UI</p>
+</section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer style="padding: 24px; text-align: center;">
-    <p>© 2026 Gerarcas RR</p>
-  </footer>
+<!-- ===== ABOUT ===== -->
+<section id="about" style="padding:60px 24px;" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>
+    I focus on building modern, responsive, and animated web experiences.
+    My portfolio emphasizes smooth interactions and clean design.
+  </p>
+</section>
 
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: "ease-out-cubic"
-    });
-  </script>
+<!-- ===== SKILLS ===== -->
+<section id="skills" style="padding:60px 24px;">
+  <h2 data-aos="fade-up">Skills</h2>
 
-  <!-- Supabase -->
-  <script type="module" src="./js/supabase.js"></script>
+  <div data-aos="zoom-in" class="card" style="margin-top:20px; padding:20px; border-radius:12px; background:#0b0820;">
+    HTML • CSS • JavaScript • Tailwind • Supabase
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" style="padding:60px 24px;">
+  <h2 data-aos="fade-up">Projects</h2>
+
+  <div class="card" data-aos="fade-up" style="margin-top:20px; padding:20px; border-radius:12px; background:#0b0820;">
+    <h3>Portfolio Website</h3>
+    <p>Animated, mobile-friendly portfolio using Supabase.</p>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" style="padding:60px 24px;" data-aos="fade-up">
+  <h2>Contact</h2>
+
+  <form id="contact-form">
+    <input type="text" placeholder="Your Name" required><br><br>
+    <input type="email" placeholder="Your Email" required><br><br>
+    <textarea placeholder="Your Message" required></textarea><br><br>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer style="padding:24px; text-align:center;">
+  <p>© 2026 Gerarcas RR</p>
+</footer>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    easing: "ease-out-cubic"
+  });
+</script>
+
+<!-- Supabase -->
+<script type="module" src="./js/supabase.js"></script>
 
 </body>
 </html>
