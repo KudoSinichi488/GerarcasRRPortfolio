@@ -3,69 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="Photo.jpg"  />
+  <title>Gerarcas Portfolio – Front-End Web Developer</title>
 
-  <!-- Primary Meta Tags -->
-  <title>Eki Zulfar Rachman – Front-End Web Developer</title>
-  <meta name="title" content="Eki Zulfar Rachman – Front-End Web Developer" />
-  <meta name="description" content="Saya Eki Zulfar Rachman, pengembang web front-end yang berfokus pada desain antarmuka modern, responsif, dan performa tinggi. Lihat portofolio dan kontak saya di sini." />
-  <meta name="keywords" content="Eki, Eki Zulfar, Front-End Developer, Web Developer Indonesia, Portofolio Eki, ekizr" />
-  <meta name="google-site-verification" content="ZYNfZwMUiNwSMF3EMvY85bid2BVvB12uMMRfUNWw75A" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="theme-color" content="#030014" />
-  <meta name="msapplication-navbutton-color" content="#030014" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Photo.jpg" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://eki.my.id/" />
-  <meta property="og:title" content="Eki Zulfar Rachman – Front-End Web Developer" />
-  <meta property="og:description" content="Portofolio Eki Zulfar Rachman – pengembang web dengan fokus pada desain modern dan performa tinggi." />
-  <meta property="og:image" content="https://eki.my.id/Meta.png" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://eki.my.id/" />
-  <meta name="twitter:title" content="Eki Zulfar Rachman – Front-End Web Developer" />
-  <meta name="twitter:description" content="Portofolio Eki Zulfar Rachman – pengembang web dengan fokus pada desain modern dan performa tinggi." />
-  <meta name="twitter:image" content="https://eki.my.id/Meta.png" />
-
-  <!-- Structured Data JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "SiteNavigationElement",
-        "name": "Home",
-        "url": "https://www.eki.my.id/#Home"
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "name": "About",
-        "url": "https://www.eki.my.id/#About"
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "name": "Portofolio",
-        "url": "https://www.eki.my.id/#Portofolio"
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "name": "Contact",
-        "url": "https://www.eki.my.id/#Contact"
-      }
-    ]
-  }
-  </script>
+  <!-- Tailwind CDN (if your CSS uses Tailwind) -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-[#030014] text-white">
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  
+  <!-- Navbar -->
+  <nav class="p-4 flex justify-between items-center">
+    <div class="font-bold text-xl">Gerarcas Portfolio</div>
+    <ul class="flex space-x-4">
+      <li><a href="#Home" class="hover:text-indigo-400">Home</a></li>
+      <li><a href="#About" class="hover:text-indigo-400">About</a></li>
+      <li><a href="#Portfolio" class="hover:text-indigo-400">Portfolio</a></li>
+      <li><a href="#Contact" class="hover:text-indigo-400">Contact</a></li>
+    </ul>
+  </nav>
 
-  </body>
-</html>
+  <!-- Home Section -->
+  <section id="Home" class="min-h-screen flex flex-col justify-center items-center">
+    <h1 class="text-4xl md:text-6xl font-bold animate-blob">Hi, I’m Gerarcas</h1>
+    <p class="mt-4 text-lg md:text-2xl text-indigo-400">Front-End Web Developer</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="About" class="min-h-screen p-8">
+    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+    <p>I am a front-end web developer who focuses on modern, responsive, and high-performance design. I enjoy creating interactive websites and learning new technologies.</p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="Portfolio" class="min-h-screen p-8">
+    <h2 class="text-3xl font-bold mb-4">Portfolio</h2>
+    <p>Here are some of my projects:</p>
+    <!-- Add project cards/images here -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+      <div class="bg-[#0b0020] p-4 rounded-lg shadow-lg">Project 1</div>
+      <div class="bg-[#0b0020] p-4 rounded-lg shadow-lg">Project 2</div>
+      <div class="bg-[#0b0020] p-4 rounded-lg shadow-lg">Project 3</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="Contact" class="min-h-screen p-8">
+    <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+
+    <form id="contactForm" class="flex flex-col max-w-md space-y-4">
+      <input type="text" id="name" placeholder="Your Name" class="p-2 rounded bg-[#0b0020]" required>
+      <input type="email" id="email" placeholder="Your Email" class="p-2 rounded bg-[#0b0020]" required>
+      <textarea id="message" placeholder="Your Message" class="p-2 rounded bg-[#0b0020]" rows="5" required></textarea>
+      <button type="submit" class="bg-indigo-500 hover:bg-indigo-600 p-2 rounded">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="p-4 text-center border-t border-indigo-400">
+    &copy; 2026 Gerarcas Portfolio. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="./js/supabase.js"></script>
+
+  <script type="module">
+    import { supabase } from './js/supabase.js';
+
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      const { data, error } = await supabase
+        .from('contacts')
+        .insert([{ name, email, message }]);
+
+      if (error) {
+        alert('Failed to send message: ' + error.message);
+      } else {
+        alert('Message sent successfully!');
+        form.reset();
+      }
+    });
+  </script>
+</body>
+  </html>
