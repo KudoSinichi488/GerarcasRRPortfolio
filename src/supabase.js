@@ -1,13 +1,10 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-// Access environment variables using import.meta.env for Vite
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL; 
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+// Your Supabase project URL
+const supabaseUrl = 'https://dafbysgxzyjahljmtbyp.supabase.co'
 
-if (!supabaseUrl || !supabaseKey) {
-  console.error("Supabase URL:", supabaseUrl);
-  console.error("Supabase Anon Key:", supabaseKey);
-  throw new Error("Supabase URL and Anon Key are required. Check your .env file and ensure they are prefixed with VITE_ and the dev server was restarted.");
-}
+// Your anon public key (safe to use on the frontend)
+const supabaseAnonKey = 'sb_publishable_OD0De1_0HAHkShU1nWNq6A_if_NgwvJ'
 
-export const supabase = createClient(supabaseUrl, supabaseKey);
+// Create the Supabase client
+export const supabase = createClient(supabaseUrl, supabaseAnonKey)
