@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- Floating Blobs -->
+<!-- Floating Blobs Background -->
 <div class="blob" style="--size:200px; --top:10%; --left:20%; --color:#00bfff;"></div>
 <div class="blob" style="--size:300px; --top:50%; --left:70%; --color:#3f00ff;"></div>
 <div class="blob" style="--size:150px; --top:70%; --left:40%; --color:#00d4ff;"></div>
@@ -27,6 +27,8 @@
     <div class="hamburger" id="hamburger">☰</div>
   </div>
 </nav>
+
+<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#welcome" onclick="closeMenu()">Home</a>
   <a href="#profile" onclick="closeMenu()">Profile</a>
@@ -34,7 +36,8 @@
   <a href="#projects" onclick="closeMenu()">Projects</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
-<div style="height:80px;"></div>
+
+<div style="height:80px;"></div> <!-- spacer for fixed navbar -->
 
 <!-- WELCOME SECTION -->
 <section id="welcome" class="fade">
@@ -53,6 +56,7 @@
 <section id="profile" class="fade glass">
   <div class="section-container">
     <div class="profile-image">
+      <!-- Replace this GIF anytime -->
       <img src="profile.gif" alt="My Profile GIF">
     </div>
     <div class="profile-text">
@@ -121,14 +125,18 @@
 
   // Scroll Fade Animation
   const faders = document.querySelectorAll(".fade");
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
         entry.target.classList.add("show");
+        observer.unobserve(entry.target); // trigger once
       }
     });
-  });
+  }, { threshold: 0.2 });
+
   faders.forEach(fade => observer.observe(fade));
 </script>
+
 </body>
 </html>
