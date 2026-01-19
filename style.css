@@ -1,29 +1,69 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background: #030014;
+  z-index: 1000;
+  padding: 16px 20px;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
   color: white;
-  overflow-x: hidden;
+  font-weight: 500;
 }
 
-/* Smooth animations */
-[data-aos] {
-  will-change: transform, opacity;
+/* Hamburger */
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
 }
 
-/* Example hover animation */
-.card {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background: #0b0820;
+  padding: 80px 20px;
+  transition: right 0.35s ease;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+.mobile-menu a {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Active */
+.mobile-menu.active {
+  right: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
 }
