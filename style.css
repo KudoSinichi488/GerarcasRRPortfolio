@@ -1,69 +1,66 @@
-/* ===== NAVBAR ===== */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #030014;
-  z-index: 1000;
-  padding: 16px 20px;
+/* Dark Theme Base */
+body {
+  background-color: #030014;
+  color: #ffffff; /* default text color for readability */
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
 }
 
-.nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Headings */
+h1, h2, h3 {
+  color: #f0f0ff; /* brighter heading */
 }
 
 /* Links */
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
+a {
+  color: #6366f1; /* neon blue/purple */
   text-decoration: none;
-  color: white;
-  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-/* Hamburger */
-.hamburger {
-  font-size: 26px;
+a:hover {
+  color: #a855f7; /* neon purple on hover */
+}
+
+/* Project Cards */
+.project-card {
+  background-color: #0b0820;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+/* Form Inputs */
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1a142c;
+  color: #fff;
+}
+
+button {
+  background: #6366f1;
   cursor: pointer;
-  display: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
 
-/* Mobile Menu */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 70%;
-  height: 100vh;
-  background: #0b0820;
-  padding: 80px 20px;
-  transition: right 0.35s ease;
+button:hover {
+  background: #a855f7;
 }
 
-.mobile-menu a {
-  display: block;
-  margin-bottom: 24px;
-  font-size: 18px;
-  color: white;
-  text-decoration: none;
-}
-
-/* Active */
-.mobile-menu.active {
-  right: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-  }
+/* Sections spacing */
+section {
+  padding: 60px 24px;
 }
