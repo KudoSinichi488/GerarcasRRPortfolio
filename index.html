@@ -3,97 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gerarcas Portfolio – Front-End Web Developer</title>
+
+  <title>Gerarcas RR Portfolio</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="Photo.jpg" />
+  <link rel="icon" type="image/png" href="./Photo.jpg">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CDN (if your CSS uses Tailwind) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-[#030014] text-white">
 
-  <!-- Navbar -->
-  <nav class="p-4 flex justify-between items-center">
-    <div class="font-bold text-xl">Gerarcas Portfolio</div>
-    <ul class="flex space-x-4">
-      <li><a href="#Home" class="hover:text-indigo-400">Home</a></li>
-      <li><a href="#About" class="hover:text-indigo-400">About</a></li>
-      <li><a href="#Portfolio" class="hover:text-indigo-400">Portfolio</a></li>
-      <li><a href="#Contact" class="hover:text-indigo-400">Contact</a></li>
-    </ul>
-  </nav>
+<body>
 
-  <!-- Home Section -->
-  <section id="Home" class="min-h-screen flex flex-col justify-center items-center">
-    <h1 class="text-4xl md:text-6xl font-bold animate-blob">Hi, I’m Gerarcas</h1>
-    <p class="mt-4 text-lg md:text-2xl text-indigo-400">Front-End Web Developer</p>
+  <!-- ===== HEADER ===== -->
+  <header style="padding: 24px; text-align: center;">
+    <h1 data-aos="fade-down">Gerarcas RR</h1>
+    <p data-aos="fade-up">Front-End Portfolio</p>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section style="padding: 40px;" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+      I am a front-end developer focused on clean UI,
+      smooth animations, and mobile-first design.
+    </p>
   </section>
 
-  <!-- About Section -->
-  <section id="About" class="min-h-screen p-8">
-    <h2 class="text-3xl font-bold mb-4">About Me</h2>
-    <p>I am a front-end web developer who focuses on modern, responsive, and high-performance design. I enjoy creating interactive websites and learning new technologies.</p>
-  </section>
+  <!-- ===== PROJECTS ===== -->
+  <section style="padding: 40px;">
+    <h2 data-aos="fade-up">Projects</h2>
 
-  <!-- Portfolio Section -->
-  <section id="Portfolio" class="min-h-screen p-8">
-    <h2 class="text-3xl font-bold mb-4">Portfolio</h2>
-    <p>Here are some of my projects:</p>
-    <!-- Add project cards/images here -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-      <div class="bg-[#0b0020] p-4 rounded-lg shadow-lg">Project 1</div>
-      <div class="bg-[#0b0020] p-4 rounded-lg shadow-lg">Project 2</div>
-      <div class="bg-[#0b0020] p-4 rounded-lg shadow-lg">Project 3</div>
+    <div class="card" data-aos="zoom-in" style="margin-top: 20px; padding: 20px; border-radius: 12px; background: #0b0820;">
+      <h3>Sample Project</h3>
+      <p>Mobile-friendly animated portfolio project.</p>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="Contact" class="min-h-screen p-8">
-    <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+  <!-- ===== CONTACT ===== -->
+  <section style="padding: 40px;" data-aos="fade-up">
+    <h2>Contact</h2>
 
-    <form id="contactForm" class="flex flex-col max-w-md space-y-4">
-      <input type="text" id="name" placeholder="Your Name" class="p-2 rounded bg-[#0b0020]" required>
-      <input type="email" id="email" placeholder="Your Email" class="p-2 rounded bg-[#0b0020]" required>
-      <textarea id="message" placeholder="Your Message" class="p-2 rounded bg-[#0b0020]" rows="5" required></textarea>
-      <button type="submit" class="bg-indigo-500 hover:bg-indigo-600 p-2 rounded">Send Message</button>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your name" required><br><br>
+      <input type="email" id="email" placeholder="Your email" required><br><br>
+      <textarea id="message" placeholder="Your message" required></textarea><br><br>
+      <button type="submit">Send</button>
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer class="p-4 text-center border-t border-indigo-400">
-    &copy; 2026 Gerarcas Portfolio. All rights reserved.
+  <!-- ===== FOOTER ===== -->
+  <footer style="padding: 24px; text-align: center;">
+    <p>© 2026 Gerarcas RR</p>
   </footer>
 
-  <!-- Scripts -->
-  <script type="module" src="./js/supabase.js"></script>
-
-  <script type="module">
-    import { supabase } from './js/supabase.js';
-
-    const form = document.getElementById('contactForm');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-
-      const { data, error } = await supabase
-        .from('contacts')
-        .insert([{ name, email, message }]);
-
-      if (error) {
-        alert('Failed to send message: ' + error.message);
-      } else {
-        alert('Message sent successfully!');
-        form.reset();
-      }
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-out-cubic"
     });
   </script>
+
+  <!-- Supabase -->
+  <script type="module" src="./js/supabase.js"></script>
+
 </body>
-  </html>
+</html>
