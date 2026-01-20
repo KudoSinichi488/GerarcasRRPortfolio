@@ -1,142 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GerarcasRR Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rex Portfolio</title>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Floating Blobs Background -->
-<div class="blob" style="--size:200px; --top:10%; --left:20%; --color:#00bfff;"></div>
-<div class="blob" style="--size:300px; --top:50%; --left:70%; --color:#3f00ff;"></div>
-<div class="blob" style="--size:150px; --top:70%; --left:40%; --color:#00d4ff;"></div>
+  <!-- HEADER -->
+  <header class="header glass">
+    <div class="logo">Rex</div>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-inner">
-    <strong>GerarcasRR</strong>
-    <div class="nav-links">
-      <a href="#welcome">Home</a>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
       <a href="#profile">Profile</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="hamburger" id="hamburger">☰</div>
-  </div>
-</nav>
+  </header>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#welcome" onclick="closeMenu()">Home</a>
-  <a href="#profile" onclick="closeMenu()">Profile</a>
-  <a href="#skills" onclick="closeMenu()">Skills</a>
-  <a href="#projects" onclick="closeMenu()">Projects</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
-</div>
-
-<div style="height:80px;"></div> <!-- spacer for fixed navbar -->
-
-<!-- WELCOME SECTION -->
-<section id="welcome" class="fade">
-  <div class="section-container">
-    <div class="text">
-      <h1>Welcome to my <span>Portfolio Website</span></h1>
-      <p>Discover my work, skills, and projects.</p>
+  <!-- HOME -->
+  <section id="home" class="section hero">
+    <div class="hero-text" data-aos="fade-right">
+      <h1>Welcome to my portfolio website</h1>
+      <p>Frontend Developer • Student • Creator</p>
     </div>
-    <div class="hero-gif">
-      <img src="coding.gif" alt="Coding Animation">
+
+    <div class="hero-media" data-aos="fade-left">
+      <!-- VIDEO LOOP (RECOMMENDED) -->
+      <video autoplay loop muted playsinline>
+        <source src="assets/coding.mp4" type="video/mp4">
+      </video>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROFILE SECTION -->
-<section id="profile" class="fade glass">
-  <div class="section-container">
-    <div class="profile-image">
-      <!-- Replace this GIF anytime -->
-      <img src="profile.gif" alt="My Profile GIF">
+  <!-- PROFILE -->
+  <section id="profile" class="section glass" data-aos="fade-up">
+    <div class="profile-wrapper">
+      <video class="profile-video" autoplay loop muted playsinline>
+        <source src="assets/profile.mp4" type="video/mp4">
+      </video>
+
+      <div class="profile-text">
+        <h2>About Me</h2>
+        <p>
+          I am Rex, a passionate web developer who loves creating modern,
+          interactive, and mobile-friendly websites with clean UI and smooth animations.
+        </p>
+      </div>
     </div>
-    <div class="profile-text">
-      <h2>About Me</h2>
-      <p>Hello! I'm Rex, a passionate student developer exploring web design, animations, and interactive experiences. You can replace this GIF with any animated profile image you like.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="cards">
+      <div class="card glass">HTML</div>
+      <div class="card glass">CSS</div>
+      <div class="card glass">JavaScript</div>
+      <div class="card glass">React</div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SKILLS SECTION -->
-<section id="skills" class="fade glass">
-  <h2>Skills</h2>
-  <div class="skill-cards">
-    <div class="glass">HTML5 / CSS3</div>
-    <div class="glass">JavaScript</div>
-    <div class="glass">Tailwind CSS</div>
-    <div class="glass">Responsive Design</div>
-    <div class="glass">GitHub Pages</div>
-  </div>
-</section>
+  <!-- PROJECTS -->
+  <section id="projects" class="section glass" data-aos="fade-up">
+    <h2>Projects</h2>
+    <p>My projects will appear here.</p>
+  </section>
 
-<!-- PROJECTS SECTION -->
-<section id="projects" class="fade glass">
-  <h2>Projects</h2>
-  <div class="project-card glass">
-    <h3>Portfolio Website</h3>
-    <p>Responsive portfolio built for school purposes.</p>
-  </div>
-  <div class="project-card glass">
-    <h3>QR Attendance System</h3>
-    <p>Automated QR-based attendance app with SMS integration.</p>
-  </div>
-</section>
+  <!-- CONTACT -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2>Contact</h2>
+    <form action="https://mail.google.com/mail/?view=cm&fs=1&to=yourgmail@gmail.com" target="_blank">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-<!-- CONTACT SECTION -->
-<section id="contact" class="fade glass">
-  <h2>Contact Me</h2>
-  <form action="mailto:yourgmail@gmail.com" method="post" enctype="text/plain">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 GerarcasRR • For School Purposes Only</p>
-</footer>
-
-<!-- SCRIPTS -->
-<script>
-  // Hamburger Menu
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("active");
-    hamburger.textContent = hamburger.textContent === "☰" ? "✕" : "☰";
-  });
-
-  function closeMenu() {
-    mobileMenu.classList.remove("active");
-    hamburger.textContent = "☰";
-  }
-
-  // Scroll Fade Animation
-  const faders = document.querySelectorAll(".fade");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target); // trigger once
-      }
-    });
-  }, { threshold: 0.2 });
-
-  faders.forEach(fade => observer.observe(fade));
-</script>
-
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
