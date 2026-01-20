@@ -1,12 +1,8 @@
-AOS.init({
-  duration: 1000,
-  once: true
-});
+AOS.init({ duration: 900, once: true });
 
-const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav');
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
 
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('active');
-  hamburger.classList.toggle('open');
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("active");
 });
