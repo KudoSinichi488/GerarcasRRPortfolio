@@ -2,98 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rex Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rex Rommel | Portfolio</title>
 
   <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="header glass">
-    <div class="logo">Rex</div>
+<header class="header">
+  <div class="logo">Rex</div>
 
-    <nav class="nav" id="nav">
-      <a href="#home">Home</a>
-      <a href="#profile">Profile</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <nav class="nav" id="nav">
+    <a href="#home">Home</a>
+    <a href="#profile">Profile</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </header>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
 
-  <!-- HOME -->
-  <section id="home" class="section hero">
-    <div class="hero-text" data-aos="fade-right">
-      <h1>Welcome to my portfolio website</h1>
-      <p>Frontend Developer • Student • Creator</p>
-    </div>
+<main>
 
-    <div class="hero-media" data-aos="fade-left">
-      <!-- VIDEO LOOP (RECOMMENDED) -->
-      <video autoplay loop muted playsinline>
-        <source src="assets/coding.mp4" type="video/mp4">
-      </video>
-    </div>
-  </section>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-text" data-aos="fade-right">
+    <h1>
+      Welcome to my<br>
+      <span>Portfolio Website</span>
+    </h1>
+    <p>Modern • Animated • Responsive Web</p>
+  </div>
 
-  <!-- PROFILE -->
-  <section id="profile" class="section glass" data-aos="fade-up">
-    <div class="profile-wrapper">
-      <video class="profile-video" autoplay loop muted playsinline>
-        <source src="assets/profile.mp4" type="video/mp4">
-      </video>
+  <div class="hero-media" data-aos="fade-left">
+    <video autoplay loop muted playsinline>
+      <source src="hero.mp4" type="video/mp4">
+    </video>
+    <!-- OR replace with GIF -->
+    <!-- <img src="hero.gif" /> -->
+  </div>
+</section>
 
-      <div class="profile-text">
-        <h2>About Me</h2>
-        <p>
-          I am Rex, a passionate web developer who loves creating modern,
-          interactive, and mobile-friendly websites with clean UI and smooth animations.
-        </p>
-      </div>
-    </div>
-  </section>
+<!-- PROFILE -->
+<section id="profile" class="section glass" data-aos="fade-up">
+  <img src="profile.gif" class="profile-img" alt="Profile"/>
+  <div class="text">
+    <h2>About Me</h2>
+    <p>
+      I am Rex Rommel, a passionate frontend developer who
+      loves clean design, smooth animations, and modern UI.
+    </p>
+  </div>
+</section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section" data-aos="fade-up">
-    <h2>Skills</h2>
-    <div class="cards">
-      <div class="card glass">HTML</div>
-      <div class="card glass">CSS</div>
-      <div class="card glass">JavaScript</div>
-      <div class="card glass">React</div>
-    </div>
-  </section>
+<!-- SKILLS -->
+<section id="skills" class="section" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="cards">
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">JavaScript</div>
+    <div class="card">UI / UX</div>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section glass" data-aos="fade-up">
-    <h2>Projects</h2>
-    <p>My projects will appear here.</p>
-  </section>
+<!-- PROJECTS -->
+<section id="projects" class="section glass" data-aos="fade-up">
+  <h2>Projects</h2>
+  <div class="cards">
+    <div class="card">Portfolio Website</div>
+    <div class="card">Attendance System</div>
+    <div class="card">School Dashboard</div>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section" data-aos="fade-up">
-    <h2>Contact</h2>
-    <form action="https://mail.google.com/mail/?view=cm&fs=1&to=yourgmail@gmail.com" target="_blank">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+<!-- CONTACT -->
+<section id="contact" class="section" data-aos="fade-up">
+  <h2>Contact</h2>
+  <a class="contact-btn"
+     href="mailto:yourgmail@gmail.com?subject=Portfolio Contact">
+     Contact Me
+  </a>
+</section>
 
-  <!-- JS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="main.js"></script>
+</main>
+
+<footer>
+  © 2026 Rex Rommel
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
