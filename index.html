@@ -4,12 +4,17 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rex Rommel Gerarcas Portfolio</title>
+
+  <!-- Style -->
   <link rel="stylesheet" href="style.css"/>
+
+  <!-- AOS Animate On Scroll -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
 
 <!-- HEADER -->
-<header class="header">
+<header class="header" id="header">
   <div class="logo">RRG</div>
   <nav class="nav" id="nav">
     <a href="#home">Home</a>
@@ -27,55 +32,53 @@
   <span></span>
 </div>
 
-<!-- HERO SECTION -->
-<section id="home" class="hero">
+<!-- HERO -->
+<section id="home" class="hero section" style="background-image: url('hero-bg.jpg');" data-aos="fade-up">
   <div class="hero-left">
     <h1 class="neon-text">Welcome to my portfolio website</h1>
     <p class="subtitle">Rex Rommel Gerarcas</p>
     <p class="tagline">ICT–CSS 12 • NC II Holder • Cyber • Frontend • Interactive Web</p>
   </div>
   <div class="hero-right">
-    <img src="hero.gif" alt="Cyber animation"/>
-    <!-- Or video -->
-    <!-- <video autoplay loop muted playsinline src="hero.mp4"></video> -->
+    <img src="hero.gif" alt="Hero GIF">
   </div>
 </section>
 
-<!-- PROFILE SECTION -->
-<section id="profile" class="section glass">
+<!-- PROFILE -->
+<section id="profile" class="section glass" style="background-image: url('profile-bg.jpg');" data-aos="fade-up">
   <h2>Profile</h2>
   <div class="profile-container">
     <img class="profile-img" src="profile.gif" alt="Profile GIF"/>
     <p>
-      Passionate ICT student focused on frontend development, cyber-styled UI,
-      and interactive web experiences. Profile image can be updated as GIF.
+      Passionate ICT student focused on frontend development,
+      cyber-styled UI, and interactive web experiences.
     </p>
   </div>
 </section>
 
-<!-- SKILLS SECTION -->
-<section id="skills" class="section glass">
+<!-- SKILLS -->
+<section id="skills" class="section glass" style="background-image: url('skills-bg.jpg');" data-aos="fade-up">
   <h2>Skills</h2>
   <div class="cards">
-    <div class="card">HTML</div>
-    <div class="card">CSS</div>
-    <div class="card">JavaScript</div>
-    <div class="card">UI / UX</div>
+    <div class="card" data-aos="zoom-in">HTML</div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="100">CSS</div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="200">JavaScript</div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="300">UI / UX</div>
   </div>
 </section>
 
-<!-- PROJECTS SECTION -->
-<section id="projects" class="section glass">
+<!-- PROJECTS -->
+<section id="projects" class="section glass" style="background-image: url('projects-bg.jpg');" data-aos="fade-up">
   <h2>Projects</h2>
   <div class="cards">
-    <div class="card">Portfolio Website</div>
-    <div class="card">Attendance System</div>
-    <div class="card">School Dashboard</div>
+    <div class="card" data-aos="zoom-in">Portfolio Website</div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="100">Attendance System</div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="200">School Dashboard</div>
   </div>
 </section>
 
-<!-- CONTACT SECTION -->
-<section id="contact" class="section glass">
+<!-- CONTACT -->
+<section id="contact" class="section glass" style="background-image: url('contact-bg.jpg');" data-aos="fade-up">
   <h2>Contact</h2>
   <a class="contact-btn" href="mailto:yourgmail@gmail.com">Email Me</a>
 </section>
@@ -84,6 +87,15 @@
   © 2026 Rex Rommel Gerarcas
 </footer>
 
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="main.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    easing: 'ease-in-out',
+  });
+</script>
 </body>
 </html>
