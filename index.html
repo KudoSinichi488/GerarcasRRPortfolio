@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rex Rommel | Portfolio</title>
-
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
-
-  <!-- CSS -->
+  <title>Rex Rommel Gerarcas Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
 
+<!-- HEADER -->
 <header class="header">
-  <div class="logo">Rex</div>
-
+  <div class="logo">RRG</div>
   <nav class="nav" id="nav">
     <a href="#home">Home</a>
     <a href="#profile">Profile</a>
@@ -24,49 +18,43 @@
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
-
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
 </header>
 
-<main>
+<!-- MOBILE HAMBURGER -->
+<div class="fixed-hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 <section id="home" class="hero">
-  <div class="hero-text" data-aos="fade-right">
-    <h1>
-      Welcome to my<br>
-      <span>Portfolio Website</span>
-    </h1>
-    <p>Modern • Animated • Responsive Web</p>
+  <div class="hero-left">
+    <h1 class="neon-text">Welcome to my portfolio website</h1>
+    <p class="subtitle">Rex Rommel Gerarcas</p>
+    <p class="tagline">ICT–CSS 12 • NC II Holder • Cyber • Frontend • Interactive Web</p>
   </div>
-
-  <div class="hero-media" data-aos="fade-left">
-    <video autoplay loop muted playsinline>
-      <source src="hero.mp4" type="video/mp4">
-    </video>
-    <!-- OR replace with GIF -->
-    <!-- <img src="hero.gif" /> -->
+  <div class="hero-right">
+    <img src="hero.gif" alt="Cyber animation"/>
+    <!-- Or video -->
+    <!-- <video autoplay loop muted playsinline src="hero.mp4"></video> -->
   </div>
 </section>
 
-<!-- PROFILE -->
-<section id="profile" class="section glass" data-aos="fade-up">
-  <img src="profile.gif" class="profile-img" alt="Profile"/>
-  <div class="text">
-    <h2>About Me</h2>
+<!-- PROFILE SECTION -->
+<section id="profile" class="section glass">
+  <h2>Profile</h2>
+  <div class="profile-container">
+    <img class="profile-img" src="profile.gif" alt="Profile GIF"/>
     <p>
-      I am Rex Rommel, a passionate frontend developer who
-      loves clean design, smooth animations, and modern UI.
+      Passionate ICT student focused on frontend development, cyber-styled UI,
+      and interactive web experiences. Profile image can be updated as GIF.
     </p>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" class="section" data-aos="fade-up">
+<!-- SKILLS SECTION -->
+<section id="skills" class="section glass">
   <h2>Skills</h2>
   <div class="cards">
     <div class="card">HTML</div>
@@ -76,8 +64,8 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section glass" data-aos="fade-up">
+<!-- PROJECTS SECTION -->
+<section id="projects" class="section glass">
   <h2>Projects</h2>
   <div class="cards">
     <div class="card">Portfolio Website</div>
@@ -86,22 +74,16 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section" data-aos="fade-up">
+<!-- CONTACT SECTION -->
+<section id="contact" class="section glass">
   <h2>Contact</h2>
-  <a class="contact-btn"
-     href="mailto:yourgmail@gmail.com?subject=Portfolio Contact">
-     Contact Me
-  </a>
+  <a class="contact-btn" href="mailto:yourgmail@gmail.com">Email Me</a>
 </section>
 
-</main>
-
 <footer>
-  © 2026 Rex Rommel
+  © 2026 Rex Rommel Gerarcas
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
